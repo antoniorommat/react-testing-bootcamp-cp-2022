@@ -1,6 +1,9 @@
-const Picture = () => {
+const Picture = ({src, title}) => {
   return (
-    <img src="#" aria-label="apod picture" />
+    <>
+      <h2>{title ? title : 'Image Title'}</h2>
+      <img src={src} aria-label="apod picture" />
+    </>
   );
 }
 
