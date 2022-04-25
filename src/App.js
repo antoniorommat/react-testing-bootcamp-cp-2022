@@ -1,13 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import NasaPicturePage from "./pages/nasa-picture-page/";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
-  );
+  return <NasaPicturePage />
 }
 
 export default App;
