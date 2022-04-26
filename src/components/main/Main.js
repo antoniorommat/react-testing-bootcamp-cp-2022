@@ -1,7 +1,19 @@
+import { Container, Panel } from "./Main.styles";
+
 const Main = ({children}) => {
+  const [InputDate, Picture, Explanation] = children;
+
   return (
     <main>
-      {children}
+      {InputDate}
+      <Container>
+        <Panel>
+          {Picture}
+        </Panel>
+        <Panel>
+          {Explanation}
+        </Panel>
+      </Container>
     </main>
   )
 }

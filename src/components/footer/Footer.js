@@ -1,7 +1,9 @@
+import { P } from "./Footer.styles";
+
 const Footer = ({text}) => {
   return (
     <footer>
-      <p>{text}</p>
+      <P>{text}</P>
     </footer>
   );
 };

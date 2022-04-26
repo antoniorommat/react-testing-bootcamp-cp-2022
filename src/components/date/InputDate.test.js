@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import DateImg from '.';
+import InputDate from '.';
 
 test('Must render a input date', () => {
-  render(<DateImg />);
+  render(<InputDate />);
   const date = screen.getByLabelText(/select the picture date/i);
 
   expect(date).toBeInTheDocument();

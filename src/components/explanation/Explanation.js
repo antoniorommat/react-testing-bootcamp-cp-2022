@@ -1,6 +1,8 @@
+import { P } from "./Explanation.styles";
+
 const Explanation = ({text}) => {
   return (
-    <p data-testid="explanation">{text}</p>
+    <P data-testid="explanation">{text}</P>
   );
 }
 

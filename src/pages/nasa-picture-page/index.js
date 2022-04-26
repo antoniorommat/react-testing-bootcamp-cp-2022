@@ -1,3 +1,3 @@
-import NasaPicturePage from "./nasa-picture-page";
+import NasaPicturePage from "./Nasa-picture-page";
 
 export default NasaPicturePage;

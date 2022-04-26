@@ -1,26 +1,29 @@
 import { useState, useEffect } from "react";
-import Header from "../../components/header/";
-import Footer from "../../components/footer/";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 import Main from "../../components/main";
 import { constants } from "../../library/constants";
-import DateImg from "../../components/date";
+import InputDate from "../../components/date";
 import Picture from "../../components/picture";
 import fetchImg from "../../library/fetch-img/fetchImg";
 import defaultNasaImg from "../../media/default-nasa-img.jpg";
 import Explanation from "../../components/explanation";
 
-const initialAPOD = {
-  url: defaultNasaImg,
-};
+const initialAPOD = { url: defaultNasaImg, };
+const initialAPODdate = new Date().toLocaleDateString('en-CA');
 
 const NasaPicturePage = () => {
   const [apod, setApod] = useState(initialAPOD);
-  const [apodDate, setApodDate] = useState(new Date().toLocaleDateString('en-CA'));
+  const [apodDate, setApodDate] = useState(initialAPODdate);
 
   const fetchImage = async (date) => {
     const dataFetchImg = await fetchImg(constants.url, constants.key, date);
     setApod(dataFetchImg);
   };
+
+  const handleChange = (e) => {
+    setApodDate(e.target.value);
+  }
 
   useEffect(() => {
     fetchImage(apodDate);
@@ -30,7 +33,7 @@ const NasaPicturePage = () => {
     <>
       <Header title={constants.title}/>
       <Main>
-        <DateImg />
+        <InputDate handleChange={handleChange}/>
         <Picture src={apod.url} title={apod.title} />
         <Explanation text={apod.explanation} />
       </Main>

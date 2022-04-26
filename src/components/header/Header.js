@@ -1,7 +1,9 @@
+import { H1 } from "./Header.styles";
+
 const Header = ({title}) => {
   return (
     <header>
-      <h1>{title}</h1>
+      <H1>{title}</H1>
     </header>
   );
 };

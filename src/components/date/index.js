@@ -1,3 +1,3 @@
-import DateImg from "./DateImg";
+import InputDate from "./InputDate";
 
-export default DateImg;
+export default InputDate;
